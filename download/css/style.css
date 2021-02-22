@@ -13,6 +13,7 @@ html {
   max-width: 126rem;
   margin: 0 auto;
   padding: 3rem;
+  border: none;
 }
 
 .btn {
@@ -32,6 +33,11 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (max-width: 48rem) {
+  .navbar {
+    display: none;
+  }
 }
 .navbar__logo {
   color: white;
@@ -164,6 +170,7 @@ html {
 .footer {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .footer__section {
   display: flex;
@@ -174,8 +181,18 @@ html {
   font-size: 2rem;
   margin: 5rem 0 2rem 0;
 }
+@media screen and (max-width: 64rem) {
+  .footer__header {
+    font-size: 1.5rem;
+  }
+}
 .footer__slogan {
   font-size: 3rem;
+}
+@media screen and (max-width: 64rem) {
+  .footer__slogan {
+    font-size: 2.5rem;
+  }
 }
 .footer__link {
   text-decoration: none;
@@ -184,12 +201,22 @@ html {
   font-weight: 100;
   margin: 1rem 0;
 }
+@media screen and (max-width: 64rem) {
+  .footer__link {
+    font-size: 1.5rem;
+  }
+}
 .footer__link:hover {
   text-decoration: underline;
 }
 .footer__hotlinks {
   margin: 0 1rem;
   font-size: 3rem;
+}
+@media screen and (max-width: 64rem) {
+  .footer__hotlinks {
+    font-size: 2.5rem;
+  }
 }
 
 .scndfooter {
