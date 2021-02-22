@@ -3,6 +3,7 @@ $desktop-width: 126rem;
 $font-fam: Whitney, "Helvetica Neu", Helvetica, Arial, sans-serif;
 $main-bg-color: #23272A;
 $btn-alt-color: rgb(114, 137, 218);
+$card-bg-color: #F6F6F6;
 
 // resets
 * {
@@ -12,7 +13,7 @@ $btn-alt-color: rgb(114, 137, 218);
     font-family: $font-fam;
 }
 
-//root
+// root
 html {
     font-size: 62.5%;
 }
@@ -59,6 +60,7 @@ html {
             text-decoration: none;
             color: white;
             font-size: 1.6rem;
+            font-weight: bold;
 
             &:hover {
                 text-decoration: underline;
@@ -138,4 +140,70 @@ html {
         
     }
 
+}
+
+// content
+
+.content {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 1rem;
+    margin-top: 6rem;
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $card-bg-color;
+        height: 60rem;
+        // margin: 4rem;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        &__header {
+            font-size: 4rem;
+            font-weight: 460;
+            margin: 5rem 0 2rem 0;
+        }
+
+        &__download {
+            padding: 2rem 3.5rem;
+            margin-bottom: 5rem;
+            background-color: #23272A;
+            transition: all .2s;
+
+            &:hover {
+                transition: all .2s;
+                opacity: .8;
+                box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+            }
+        }
+        
+        &__experimental {
+            display: flex;
+            align-items: flex-start;
+            height: auto;
+            padding: 4rem;
+            margin-top: -40rem;
+            justify-content: space-evenly;
+
+            &__btn {
+                margin: 0;
+            }
+        }
+
+        &__info {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__android {
+        margin-top: 20rem;
+    }
+
+    &__linux {
+        margin-top: -20rem;
+    }
 }
