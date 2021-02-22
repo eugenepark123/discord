@@ -97,7 +97,6 @@ html {
 .main__txt__info {
   font-size: 1.6rem;
   margin: 0 2rem;
-  background-color: #444;
 }
 .main__img {
   height: 35rem;
@@ -141,7 +140,7 @@ html {
   align-items: flex-start;
   height: auto;
   padding: 4rem;
-  margin-top: -40rem;
+  margin: -40rem 0 10rem 0;
   justify-content: space-evenly;
 }
 .content__card__experimental__btn {
@@ -156,6 +155,60 @@ html {
 }
 .content__linux {
   margin-top: -20rem;
+}
+
+.footersection {
+  background-color: #23272A;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+}
+.footer__header {
+  color: #7289da;
+  font-size: 2rem;
+  margin: 5rem 0 2rem 0;
+}
+.footer__slogan {
+  font-size: 3rem;
+}
+.footer__link {
+  text-decoration: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 1rem 0;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__hotlinks {
+  margin: 0 1rem;
+  font-size: 3rem;
+}
+
+.scndfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: solid 1px #7289da;
+  padding-top: 3rem;
+}
+.scndfooter__btn {
+  color: white;
+  background-color: #7289da;
+  font-size: 1.6rem;
+  padding: 1.25rem;
+}
+.scndfooter__btn:hover {
+  transition: all 0.2s;
+  opacity: 0.8;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /*# sourceMappingURL=style.css.map */

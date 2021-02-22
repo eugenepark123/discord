@@ -4,6 +4,8 @@ $font-fam: Whitney, "Helvetica Neu", Helvetica, Arial, sans-serif;
 $main-bg-color: #23272A;
 $btn-alt-color: rgb(114, 137, 218);
 $card-bg-color: #F6F6F6;
+$fa-font-path: "../font";
+$brand: #7289da;
 
 // resets
 * {
@@ -128,9 +130,7 @@ html {
         &__info {
             font-size: 1.6rem;
             margin: 0 2rem;
-            background-color: #444;
         }
-
     }
 
     &__img {
@@ -185,7 +185,7 @@ html {
             align-items: flex-start;
             height: auto;
             padding: 4rem;
-            margin-top: -40rem;
+            margin: -40rem 0 10rem 0;
             justify-content: space-evenly;
 
             &__btn {
@@ -205,5 +205,69 @@ html {
 
     &__linux {
         margin-top: -20rem;
+    }
+}
+
+// footer
+
+.footersection {
+    background-color: $main-bg-color;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    // border-bottom: solid 1px $brand;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__header {
+        color: #7289da;
+        font-size: 2rem;
+        margin: 5rem 0 2rem 0;
+    }
+
+    &__slogan {
+        font-size: 3rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+        font-weight: 100;
+        margin: 1rem 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__hotlinks {
+        margin: 0 1rem;
+        font-size: 3rem;
+    }
+}
+
+.scndfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: solid 1px $brand;
+    padding-top: 3rem;
+
+    &__btn {
+        color: white;
+        background-color: $brand;
+        font-size: 1.6rem;
+        padding: 1.25rem;
+
+        &:hover {
+            transition: all .2s;
+            opacity: .8;
+            box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+        }
     }
 }
