@@ -68,9 +68,6 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: $bp-tablet) {
-        display: none;
-    }
 
     &__logo {
         color: white;
@@ -79,6 +76,9 @@ html {
     &__links {
         display: flex;
         list-style: none;
+        @media screen and (max-width: $bp-laptop) {
+            display: none;
+        }
 
         &__item {
             margin: 0 2rem;
@@ -105,6 +105,7 @@ html {
 .main {
     background-color: $main-bg-color;
     display: flex;
+
     
     &__section {
         display: flex;
@@ -134,6 +135,10 @@ html {
         &__download {
             display: flex;
             align-items: center;
+            @media screen and (max-width: $bp-laptop) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
 
         &__btn {
@@ -153,14 +158,25 @@ html {
         &__info {
             font-size: 1.6rem;
             margin: 0 2rem;
+            @media screen and (max-width: $bp-laptop) {
+                margin: 3rem 0;
+            }
         }
     }
 
-    &__img {
-        height: 35rem;
+    &__imgcontainer {
         width: 50%;
+        height: 100%;
+        // display: block;
+    }
 
-        
+    &__img {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        // @media screen and (max-width: $bp-laptop) {
+        //     margin: 0 auto;
+        // }
     }
 
 }
@@ -183,6 +199,7 @@ html {
         // margin: 4rem;
         border-radius: 2rem;
         overflow: hidden;
+        padding: 4rem;
 
         &__header {
             font-size: 4rem;
@@ -220,6 +237,11 @@ html {
             font-size: 2rem;
             margin-bottom: 2rem;
         }
+
+        &__img {
+            width: auto;
+            margin: 0 auto;
+        }
     }
 
     &__android {
@@ -241,10 +263,37 @@ html {
     justify-content: space-between;
     align-items: flex-start;
     // border-bottom: solid 1px $brand;
+    @media screen and(max-width: $bp-laptop) {
+        padding: 2rem 0;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: space-around;
+        @media screen and (max-width: $bp-laptop) {
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-columns: repeat(2,1fr);
+            text-align: left;
+            width: 50%;
+            height: 70rem;
+        }
+    }
+
+    &__left {
+        width: 30%;
+    }
 
     &__section {
         display: flex;
         flex-direction: column;
+        // margin: 0 6rem;
+        @media screen and (max-width: $bp-laptop) {
+            // justify-self: center;
+            // align-self: center;
+        }
     }
 
     &__header {
@@ -255,6 +304,9 @@ html {
         //     font-size: 1.5rem;
         // }
         @include bp-devices(1.5);
+        @media screen and (max-width: $bp-laptop) {
+            margin: 1rem 0;
+        }
     }
 
     &__slogan {
@@ -272,6 +324,9 @@ html {
         //     font-size: 1.5rem;
         // }
         @include bp-devices(1.5);
+        @media screen and (max-width: $bp-laptop) {
+            margin: .75rem 0;
+        }
 
         &:hover {
             text-decoration: underline;

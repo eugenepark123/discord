@@ -34,17 +34,17 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (max-width: 48rem) {
-  .navbar {
-    display: none;
-  }
-}
 .navbar__logo {
   color: white;
 }
 .navbar__links {
   display: flex;
   list-style: none;
+}
+@media screen and (max-width: 64rem) {
+  .navbar__links {
+    display: none;
+  }
 }
 .navbar__links__item {
   margin: 0 2rem;
@@ -90,6 +90,12 @@ html {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 64rem) {
+  .main__txt__download {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .main__txt__btn {
   display: flex;
   align-items: center;
@@ -104,9 +110,19 @@ html {
   font-size: 1.6rem;
   margin: 0 2rem;
 }
-.main__img {
-  height: 35rem;
+@media screen and (max-width: 64rem) {
+  .main__txt__info {
+    margin: 3rem 0;
+  }
+}
+.main__imgcontainer {
   width: 50%;
+  height: 100%;
+}
+.main__img {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .content {
@@ -124,6 +140,7 @@ html {
   height: 60rem;
   border-radius: 2rem;
   overflow: hidden;
+  padding: 4rem;
 }
 .content__card__header {
   font-size: 4rem;
@@ -156,6 +173,10 @@ html {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+.content__card__img {
+  width: auto;
+  margin: 0 auto;
+}
 .content__android {
   margin-top: 20rem;
 }
@@ -172,6 +193,30 @@ html {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media screen and (max-width: 64rem) {
+  .footer {
+    padding: 2rem 0;
+  }
+}
+.footer__right {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-around;
+}
+@media screen and (max-width: 64rem) {
+  .footer__right {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    width: 50%;
+    height: 70rem;
+  }
+}
+.footer__left {
+  width: 30%;
+}
 .footer__section {
   display: flex;
   flex-direction: column;
@@ -184,6 +229,11 @@ html {
 @media screen and (max-width: 64rem) {
   .footer__header {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 64rem) {
+  .footer__header {
+    margin: 1rem 0;
   }
 }
 .footer__slogan {
@@ -204,6 +254,11 @@ html {
 @media screen and (max-width: 64rem) {
   .footer__link {
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 64rem) {
+  .footer__link {
+    margin: 0.75rem 0;
   }
 }
 .footer__link:hover {
